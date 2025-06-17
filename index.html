@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MK2 Dashboard</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div id="loginScreen">
+    <h2>Login</h2>
+    <label for="username">Usuário:</label>
+    <input id="username" type="text" />
+    <label for="password">Senha:</label>
+    <input id="password" type="password" />
+    <button onclick="login()">Entrar</button>
+    <p id="loginError" style="color:red;"></p>
+  </div>
+
+  <div id="dashboard" class="hidden">
+    <h1>MK2 Dashboard</h1>
+    <button onclick="logout()">Sair</button>
+    <div id="adminSection" class="hidden">
+      <h2>Visão Geral (Admin)</h2>
+      <p>KPIs Admin Aqui</p>
+    </div>
+    <div id="individualSection">
+      <h2>Visão Individual</h2>
+      <p>Oportunidades: <span id="indOportunidades">0</span></p>
+      <p>VGV Total: <span id="indVgvTotal">R$ 0,00</span></p>
+      <p>Vendas: <span id="indVendas">0</span></p>
+      <p>Desistências: <span id="indDesistencia">0</span></p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
